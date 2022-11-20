@@ -2,7 +2,7 @@
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Versionz = "Beta"
+local Versionz = "1"
 
 local Window = OrionLib:MakeWindow({Name = "Codedead Endeictic // Version " .. Versionz, HidePremium = false, SaveConfig = true, ConfigFolder = "EndeicticDoors", IntroText = "Codedead Endeictic", IntroIcon = "rbxassetid://11372924961"})
 
@@ -25,99 +25,6 @@ local EntitiesTab = Window:MakeTab({
 local EntitiesSection = EntitiesTab:AddSection({
 	Name = "Custom Entities"
 })
-
---[[EntitiesTab:AddButton({
-	Name = "Spawn Trollface"
-	Callback = function()
-		local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
-		-- Create entity
-		local entity = Creator.createEntity({
-			CustomName = "Trollface", -- Custom name of your entity
-			Model = "https://github.com/te-agma-at/Doors-Bots-By-Electrophyll/blob/main/Troll.rbxm?raw=true", -- Can be GitHub file or rbxassetid
-			Speed = 500, -- Percentage, 100 = default Rush speed
-			DelayTime = 1, -- Time before starting cycles (seconds)
-			HeightOffset = 0,
-			CanKill = false,
-			KillRange = 50,
-			BreakLights = true,
-			BackwardsMovement = false,
-			FlickerLights = {
-				true, -- Enabled/Disabled
-				2, -- Time (seconds)
-			},
-			Cycles = {
-				Min = 255,
-				Max = 255,
-				WaitTime = 0.01,
-			},
-			CamShake = {
-				true, -- Enabled/Disabled
-				{5, 100, 0.1, 1}, -- Shake values (don't change if you don't know)
-				150, -- Shake start distance (from Entity to you)
-			},
-			Jumpscare = {
-				true, -- Enabled/Disabled
-				{
-					Image1 = "rbxassetid://6862780932", -- Image1 url
-					Image2 = "rbxassetid://6732849355", -- Image2 url
-					Shake = true,
-					Sound1 = {
-						7184496276, -- SoundId
-						{ Volume = 1 }, -- Sound properties
-					},
-					Sound2 = {
-						6702619371, -- SoundId
-						{ Volume = 0.5 }, -- Sound properties
-					},
-					Flashing = {
-						true, -- Enabled/Disabled
-						Color3.fromRGB(255, 255, 255), -- Color
-					},
-					Tease = {
-						true, -- Enabled/Disabled
-						Min = 1,
-						Max = 4,
-					},
-				},
-			},
-			CustomDialog = {"Uh...", "Alright."}, -- Custom death message
-		})
-
-		-----[[ Advanced -----
-		entity.Debug.OnEntitySpawned = function(entityTable)
-			print("Entity has spawned:", entityTable.Model)
-		end
-
-		entity.Debug.OnEntityDespawned = function(entityTable)
-			print("Entity has despawned:", entityTable.Model)
-		end
-
-		entity.Debug.OnEntityStartMoving = function(entityTable)
-			print("Entity has started moving:", entityTable.Model)
-		end
-
-		entity.Debug.OnEntityFinishedRebound = function(entityTable)
-			print("Entity has finished rebound:", entityTable.Model)
-		end
-
-		entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-			print("Entity:", entityTable.Model, "has entered room:", room)
-		end
-
-		entity.Debug.OnLookAtEntity = function(entityTable)
-			print("Player has looked at entity:", entityTable.Model)
-		end
-
-		entity.Debug.OnDeath = function(entityTable)
-			warn("Player has died.")
-		end
-		------------------------
-
-		-- Run the created entity
-		Creator.runEntity(entity)
-			end
-})]]
 
 EntitiesTab:AddButton({
 	Name = "Spawn Trollface",
@@ -233,8 +140,8 @@ EntitiesTab:AddButton({
 				2, -- Time (seconds)
 			},
 			Cycles = {
-				Min = 999,
-				Max = 999,
+				Min = 1,
+				Max = 1,
 				WaitTime = 0.01,
 			},
 			CamShake = {
