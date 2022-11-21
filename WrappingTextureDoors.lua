@@ -3,7 +3,7 @@ TextBox = Page:CreateBox("TextBox", 10044538000, function()
 	wrapperex
 end)
 
-local wrapped = wrapperex
+local Wrapped = wrapperex
 
 
 _G.WrappingTexture = Wrapped
