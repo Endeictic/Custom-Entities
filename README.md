@@ -1,3 +1,4 @@
-# Doors Entities
+# Custom Entities
 
-Just storage for entities
+Storage for my Custom Entities
+:skull:
